@@ -1,8 +1,10 @@
 import { Module } from "@nestjs/common";
 import { DatabaseController } from "../../../usecases/database.controller";
 import { DatabaseService } from "../../../domain/database.service";
+import { MulterModule } from "@nestjs/platform-express";
 
 @Module({
+    
     controllers: [DatabaseController],
     providers: [DatabaseService]
 })
