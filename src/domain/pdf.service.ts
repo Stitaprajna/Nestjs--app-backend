@@ -1,11 +1,9 @@
 import { Header, Injectable, StreamableFile, UploadedFile, UseInterceptors } from "@nestjs/common";
-import { FileInterceptor } from "@nestjs/platform-express";
 import { createReadStream } from "fs";
-import { diskStorage } from "multer";
 
 
 @Injectable({})
-export class DatabaseService{
+export class service{
     //GET
     @Header('Content-Disposition', 'attachment; filename="src/example.pdf"')
     getStaticFile(): StreamableFile {
@@ -13,8 +11,5 @@ export class DatabaseService{
     console.log('read pdf file');
     return new StreamableFile(file);
   }  
-    //POST
-    
-  
     
 }

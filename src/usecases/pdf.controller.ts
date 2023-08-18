@@ -1,13 +1,13 @@
 import { Controller, Get, Header, Post, UploadedFile, UseInterceptors} from "@nestjs/common";
-import { DatabaseService } from "../domain/database.service";
+import { service } from "src/domain/pdf.service";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { diskStorage } from "multer";
 
 
 
 @Controller('auth')
-export class DatabaseController {
-constructor(private services: DatabaseService){}
+export class controller {
+constructor(private services: service){}
 
 //GET RESPONSE
   @Get('Load-PDF-File')
