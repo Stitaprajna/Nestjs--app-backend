@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
-import { controller } from "src/usecases/pdf.controller";
-import { service } from "src/domain/pdf.service";
+import { controller } from "Server/src/usecases/pdf.controller";
+import { service } from "Server/src/domain/pdf.service";
 
 @Module({
     

@@ -1,5 +1,5 @@
 import { Controller, Get, Header, Post, UploadedFile, UseInterceptors} from "@nestjs/common";
-import { service } from "src/domain/pdf.service";
+import { service } from "Server/src/domain/pdf.service";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { diskStorage } from "multer";
 
@@ -20,16 +20,17 @@ constructor(private services: service){}
 //POST REQUEST
   @Post('Save-PDF-File')
   @UseInterceptors(FileInterceptor('pdf',{storage: diskStorage({
-      destination: './src',
+      destination: 'Server/src/infrastructure/repositories',
       filename:function (req, file, cb) {
         cb(null, 'example.pdf')
         },
       }),
-    }))
+    })
+  )
   UploadedFile(@UploadedFile() file: Express.Multer.File) {
-    console.log(file);
-    console.log('sucess');
-    return file;}
+    console.log('Sucess');
+    return file;
+  }
 }
 
 

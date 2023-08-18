@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { PdfDataModule } from './infrastructure/repositories/database/pdf.module';
+import { PdfDataModule } from './infrastructure/repositories/pdf.module';
 
 @Module({
   imports: [PdfDataModule],
