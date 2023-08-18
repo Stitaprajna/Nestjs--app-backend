@@ -7,7 +7,6 @@ function LoadPdfFromUrl(){
         var blob = new Blob([response.data], {
             type: 'application/pdf',
             title: pdfFile,
-            filename: 'example',
           });
         //   saveAs(blob, pdfFile);
         const blobUrl = window.URL.createObjectURL(blob);
