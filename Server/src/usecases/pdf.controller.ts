@@ -22,7 +22,7 @@ constructor(private services: service){}
   @UseInterceptors(FileInterceptor('pdf',{storage: diskStorage({
       destination: 'Server/src/infrastructure/repositories',
       filename:function (req, file, cb) {
-        cb(null, 'example.pdf')
+        cb(null, 'example1.pdf')
         },
       }),
     })
